@@ -3,6 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>Cities Around the World</title>
+        <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
      </head>
 
@@ -11,7 +15,21 @@
             <h1>City Search</h1>
         </div>
         <input id="searchtext" type="text" placeholder="Search">
-        <button id="searchgifs" type="submit"></button>
+        <button data-city="New York City">New York City</button>
+        <button data-city="Boston">Boston</button>
+        <button data-city="San Francisco">San Francisco</button>
+        <button data-city="Austin, Texas">Austin, Texas</button>
+        <button data-city="London, England">London, England</button>
+        <button data-city="Paris, France">Paris, France</button>
+        <button data-city="Tokyo, Japan">Tokyo, Japan</button>
+        <button data-city="Beijing, China">Beijing, China</button>
+        <button data-city="Mumbai, India">Mumbai, India</button>
+        <button data-city="Sau Paulo, Brazil">Sau Paulo, Brazil</button>
+        <div id = "gifsarehere"></div>
+
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
         <script type="text/javascript" src="giphy.js"></script>
     </body>     
 </html>
