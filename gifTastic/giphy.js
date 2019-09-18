@@ -6,9 +6,9 @@ var cities = ["New York City", "Boston", "San Francisco", "Austin, Texas", "Lond
 $("button").on("click", function () {
     var city = $(this).attr("data-city");
 
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + city
-    "&api_key=f2k9nSEzBJX9UdZNP6WX0I666nbhZVlv&limit=10";
-    ;
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+    city + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+    
 
     $.ajax({
         url: queryURL,
