@@ -1,4 +1,3 @@
-
 //Array of ten cities
 var cities = ["New York City", "Boston", "San Francisco", "Austin, Texas", "London, England", "Paris, France", "Tokyo, Japan", "Beijing, China", "Mumbai, India", "Sau Paulo, Brazil"];
 
@@ -7,8 +6,7 @@ $("button").on("click", function () {
     var city = $(this).attr("data-city");
 
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    city + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
-    
+        city + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
 
     $.ajax({
         url: queryURL,
@@ -40,8 +38,33 @@ $("button").on("click", function () {
                 }
             }
         })
-    });
+});
 
+function addArraycity() {
+    $("#gifsarehere").empty();
+
+    for (var i = 0; i < cities.length; i++) {
+
+        var c = $("<button>");
+
+        c.addClass("city-btn");
+
+        c.attr("data-city", cities[i]);
+
+        c.text(cities[i]);
+
+        $("#gifsarehere").append(c);
+
+    }
+}
+$("#add-city").on("click", function (event) {
+    event.preventDefault();
+    var city = $("#city-input").val().trim();
+
+    cities.push(city);
+
+    addArraycity();
+});
 // var xhr = $.get(
 // "http://api.giphy.com/v1/gifs/search?q=&api_key=U5i26FHejUhOGdZcKDziLwvbiAoodXJP&limit=10")
 //     // print json.dumps(data, sort_keys=true, indent=4);
